@@ -7,6 +7,7 @@ import Builder.components.GPSNavigator;
 import Builder.components.Transmission;
 import Builder.components.TripComputer;
 
+/* Concrete builders define steps defined in the common interface. */
 public class CarBuilder implements Builder {
     private CarType carType;
     private int seats;
