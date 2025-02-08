@@ -7,6 +7,7 @@ import Builder.components.GPSNavigator;
 import Builder.components.Transmission;
 import Builder.components.TripComputer;
 
+/* Builder can construct unrelated products, which don't have the common interface. */
 public class CarManualBuilder implements Builder {
     private CarType carType;
     private int seats;
