@@ -5,6 +5,7 @@ import Builder.components.GPSNavigator;
 import Builder.components.Transmission;
 import Builder.components.TripComputer;
 
+/* Manual is another product. Car and Manual are not related. */
 public class Manual {
     private final CarType carType;
     private final int seats;
@@ -12,7 +13,6 @@ public class Manual {
     private final Transmission transmission;
     private final TripComputer tripComputer;
     private final GPSNavigator gpsNavigator;
-    private double fuel = 0;
 
     public Manual(CarType carType, int seats, Engine engine, Transmission transmission,
                TripComputer tripComputer, GPSNavigator gpsNavigator) {
