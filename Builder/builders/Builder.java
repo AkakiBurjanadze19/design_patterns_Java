@@ -6,6 +6,7 @@ import Builder.components.GPSNavigator;
 import Builder.components.Transmission;
 import Builder.components.TripComputer;
 
+/* Builder interface defines all possible ways to configure a product. */
 public interface Builder {
     void setCarType(CarType carType);
     void setSeats(int seats);
