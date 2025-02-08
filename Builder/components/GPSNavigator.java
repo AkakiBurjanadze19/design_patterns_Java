@@ -1,5 +1,6 @@
 package Builder.components;
 
+/* GPS navigator another feature of a car. */
 public class GPSNavigator {
     private String route;;
 
