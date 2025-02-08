@@ -2,6 +2,7 @@ package Builder.components;
 
 import Builder.cars.Car;
 
+/* Trip computer as well is just another feature of a car. */
 public class TripComputer {
     private Car car;
 
