@@ -1,5 +1,6 @@
 package Builder.components;
 
+/* Transmission is also feature of a car. */
 public enum Transmission {
     SINGLE_SPEED,
     MANUAL,
