@@ -1,5 +1,6 @@
 package Builder.components;
 
+/* Engine is feature of a car. */
 public class Engine {
     private final double volume;
     private double mileage;
