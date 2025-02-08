@@ -4,7 +4,7 @@
 ## Definition
 * The Abstract Factory Design Pattern is a creational design pattern that provides an interface for creating families of related or dependent objects without specifying their concrete classes.
 * It is often used when a system needs to be independent of how its objects are created, composed, and represented.
-* 
+  
 ## Purpose
 * To create families of related objects without specifying their concrete classes.
 * To ensure that the created objects are compatible and work together.
