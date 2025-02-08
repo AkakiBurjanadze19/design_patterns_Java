@@ -5,6 +5,7 @@ import Builder.components.GPSNavigator;
 import Builder.components.Transmission;
 import Builder.components.TripComputer;
 
+/* Car is a product class. */
 public class Car {
     private final CarType carType;
     private final int seats;
