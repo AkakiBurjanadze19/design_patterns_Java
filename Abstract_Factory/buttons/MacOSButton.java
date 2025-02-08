@@ -1,5 +1,6 @@
 package Abstract_Factory.buttons;
 
+/* This is a macOS variant of a button */
 public class MacOSButton implements Button {
     @Override
     public void paint() {
