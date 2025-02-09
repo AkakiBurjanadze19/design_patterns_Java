@@ -18,7 +18,7 @@
 * `Client`: Uses the Abstract Factory and Abstract Product interfaces to create and interact with objects.
 
 ## How It Works
-* The `Clien` interacts with the `Abstract Factory` to create objects.
+* The `Client` interacts with the `Abstract Factory` to create objects.
 * The `Concrete` Factory determines the actual objects to be created.
 * The `Client` is unaware of the specific classes of the objects being created, as it works with the `Abstract Product` interfaces.
 
