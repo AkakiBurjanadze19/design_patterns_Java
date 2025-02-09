@@ -112,3 +112,52 @@
 ## Common Pitfalls
 * Creating too many builders, which can lead to a bloated codebase.
 * Failing to properly encapsulate the construction logic, leading to tight coupling.
+
+# 3) Prototype
+## Definition
+* The `Prototype Design Pattern` is a `creational design pattern` that allows you to create new objects by copying an existing object, known as the `prototype`.
+* It is used when the creation of an object is costly or complex, and you want to avoid repeating the same initialization process.
+
+## Purpose
+* To `reduce the cost of creating objects` by cloning an existing instance.
+* To `simplify object creation` when the construction process is complex or resource-intensive.
+* To `provide a flexible way to create new objects` without specifying their exact class.
+
+## Key Components
+* `Prototype`: An interface or abstract class that declares a method for cloning itself (e.g., `clone()`).
+* `Concrete Prototype`: Implements the Prototype interface and provides the actual cloning logic.
+* `Client`: Creates new objects by copying the prototype.
+
+## Advantages
+* `Reduced Overhead`: Avoids the cost of initializing an object from scratch.
+* `Flexibility`: Allows dynamic addition and removal of objects at runtime.
+* `Simplified Object Creation`: Simplifies the creation of complex objects by copying existing instances.
+* `Performance Improvement`: Can improve performance by avoiding costly construction processes.
+
+## Disadvantages
+* `Complexity`: Introduces additional complexity, especially when dealing with deep copies.
+* `Cloning Issues`: Requires careful handling of deep and shallow copies to avoid unintended side effects.
+
+## When To Use
+* When the creation of an object is more expensive or complex than copying an existing instance.
+* When you want to avoid building a class hierarchy of factories that parallels the class hierarchy of products.
+* When you need to create instances of a class that are similar to existing instances, with only a few differences.
+
+## Example Use Cases
+* Creating multiple instances of a complex object with similar initial states (e.g., game characters, document templates).
+* Implementing undo/redo functionality by storing and restoring object states.
+* Configuring objects with default settings and then customizing them as needed.
+
+## Comparision with Other Patterns
+* `Factory Method`: Focuses on creating a single product, while Prototype focuses on cloning existing instances.
+* `Abstract Factory`: Creates families of related objects, while Prototype creates new objects by copying existing ones.
+* `Builder`: Focuses on constructing complex objects step-by-step, while Prototype focuses on copying existing objects.
+
+## Best Practices
+* Use the Prototype pattern when the creation of an object is costly or complex, and you want to avoid repeating the same initialization process.
+* Ensure that the cloning logic is properly implemented to handle deep and shallow copies as needed.
+* Avoid overusing the pattern, as it can introduce unnecessary complexity if not needed.
+
+## Common Pitfalls
+* `Shallow Copy Issues`: Creating shallow copies that share references to mutable objects, leading to unintended side effects.
+* `Complex Cloning Logic`: Implementing complex cloning logic that can be difficult to maintain and debug.
