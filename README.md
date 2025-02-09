@@ -161,3 +161,56 @@
 ## Common Pitfalls
 * `Shallow Copy Issues`: Creating shallow copies that share references to mutable objects, leading to unintended side effects.
 * `Complex Cloning Logic`: Implementing complex cloning logic that can be difficult to maintain and debug.
+
+# 4) Singleton
+## Definition
+* The `Singleton Design Pattern` is a `creational design pattern` that ensures a class has only `one instance` and provides a `global point of access` to that instance.
+* It is used when exactly one object is needed to coordinate actions across a system.
+
+## Purpose
+* To `control object creation`, ensuring that only one instance of a class exists.
+* To provide a `global access point` to that instance.
+* To `manage shared resources` or centralized control logic, such as configuration settings, logging, or connection pools.
+
+## Key Components
+* `Singleton Class`: The class that implements the Singleton pattern.
+* A `private constructor` to prevent instantiation from outside the class.
+* A `static instance` of itself.
+* A `static method` (e.g., `getInstance()`) to provide access to the single instance.
+
+## Advantages
+* `Single Instance`: Ensures that only one instance of the class exists, which is useful for managing shared resources.
+* `Global Access`: Provides a global point of access to the instance.
+* `Lazy Initialization`: The instance is created only when it is needed, saving resources.
+* `Thread Safety`: Can be implemented to ensure thread-safe access to the instance.
+
+## Disadvantages
+* `Global State`: Introduces a global state, which can make the system harder to test and maintain.
+* `Scalability Issues`: Can become a bottleneck in a distributed system if overused.
+* `Violation of Single Responsibility Principle`: Combines the responsibility of managing its lifecycle and its primary functionality.
+
+## When To Use
+* When you need to ensure that only one instance of a class exists (e.g., configuration managers, logging systems, connection pools).
+* When you need a global point of access to that instance.
+* When you want to control shared resources or centralized logic.
+
+## Example Use Cases
+* `Configuration Managers`: Managing application settings that need to be accessed globally.
+* `Logging Systems`: Centralizing logging functionality across an application.
+* `Database Connection Pools`: Managing a pool of database connections.
+* `Caching Mechanisms`: Implementing a global cache for frequently accessed data.
+
+## Comparision with Other Patterns
+* `Factory Method`: Focuses on creating objects, while Singleton ensures only one instance exists.
+* `Abstract Factory`: Creates families of related objects, while Singleton ensures a single instance of a class.
+* `Prototype`: Focuses on cloning objects, while Singleton focuses on controlling object creation.
+
+## Best Practices
+* Use the Singleton pattern sparingly and only when absolutely necessary.
+* Ensure thread safety if the Singleton is accessed by multiple threads.
+* Avoid using Singleton for managing state that needs to be shared across different parts of the application, as it can lead to tight coupling.
+
+## Common Pitfalls
+* `Global State`: Introducing global state can make the system harder to test and maintain.
+* `Overuse`: Overusing the Singleton pattern can lead to scalability issues and tight coupling.
+* `Thread Safety`: Failing to implement thread safety can lead to multiple instances being created in a multi-threaded environment.
