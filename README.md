@@ -273,3 +273,59 @@
 ## Common Pitfalls
 * `Overuse`: Overusing the Adapter pattern can lead to a proliferation of adapter classes, increasing complexity.
 * `Tight Coupling`: Failing to properly encapsulate the Adaptee can lead to tight coupling between the Adapter and the Adaptee.
+
+# 6) Bridge
+## Definition
+* The `Bridge Design Pattern` is a `structural design pattern` that separates an object’s `abstraction` from its `implementation`, allowing both to vary independently.
+* It decouples the abstraction (high-level logic) from the implementation (low-level details), enabling them to evolve independently.
+
+## Purpose
+* To `decouple` an abstraction from its implementation so that the two can vary independently.
+* To `avoid a permanent binding` between an abstraction and its implementation.
+* To `improve extensibility` by allowing both abstractions and implementations to be extended independently.
+
+## Key Components
+* `Abstraction`: Defines the high-level control logic and maintains a reference to the Implementor.
+* `Refined Abstraction`: Extends the Abstraction to provide additional features or variations.
+* `Implementor`: Defines the interface for the implementation classes. This is the low-level interface.
+* `Concrete Implementor`: Implements the Implementor interface and provides the actual implementation details.
+
+## How It Works
+* The `Abstraction` contains a reference to the `Implementor` and delegates the low-level work to it.
+* The `Refined Abstractio` extends the `Abstraction` to provide additional functionality.
+* The `Concrete Implementor` implements the `Implementor` interface and provides the specific implementation details.
+* The `Client` interacts with the `Abstraction`, which in turn uses the `Implementor` to perform the low-level operations.
+
+## Advantages
+* `Decoupling`: Separates the abstraction from its implementation, allowing them to vary independently.
+* `Extensibility`: Both abstractions and implementations can be extended independently.
+* `Single Responsibility Principle`: Separates the high-level logic from the low-level details.
+* `Open/Closed Principle`: New abstractions and implementations can be introduced without modifying existing code.
+
+## Disadvantages
+* `Complexity`: Introduces additional classes and can increase the complexity of the code.
+* `Overhead`: May introduce some overhead due to the additional layer of indirection.
+
+## When To Use
+* When you want to avoid a permanent binding between an abstraction and its implementation.
+* When both the abstractions and their implementations need to be extended independently.
+* When you want to share an implementation among multiple objects.
+
+## Example Use Cases
+* GUI frameworks where the abstraction (e.g., Window) can have different implementations (e.g., Windows, macOS, Linux).
+* Device drivers where the abstraction (e.g., Printer) can have different implementations (e.g., Laser Printer, Inkjet Printer).
+* Remote controls where the abstraction (e.g., Remote Control) can control different devices (e.g., TV, Radio).
+
+## Comparision with Other Patterns
+* `Adapter`: Makes unrelated classes work together, while Bridge separates an object’s abstraction from its implementation.
+* `Decorator`: Adds behavior to objects dynamically, while Bridge separates the abstraction from the implementation.
+* `Facade`: Provides a simplified interface to a complex subsystem, while Bridge separates the high-level logic from the low-level details.
+
+## Best Practices
+* Use the Bridge pattern when you want to avoid a permanent binding between an abstraction and its implementation.
+* Ensure that the abstraction and implementation are truly independent and can vary independently.
+* Prefer composition over inheritance when implementing the Bridge pattern.
+
+## Common Pitfalls
+* `Overuse`: Overusing the Bridge pattern can lead to a proliferation of classes, increasing complexity.
+* `Tight Coupling`: Failing to properly decouple the abstraction from the implementation can lead to tight coupling.
