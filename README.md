@@ -214,3 +214,62 @@
 * `Global State`: Introducing global state can make the system harder to test and maintain.
 * `Overuse`: Overusing the Singleton pattern can lead to scalability issues and tight coupling.
 * `Thread Safety`: Failing to implement thread safety can lead to multiple instances being created in a multi-threaded environment.
+
+# 5) Adapter
+## Definition
+* The `Adapter Design Pattern` is a `structural design pattern` that allows incompatible interfaces to work together.
+* It acts as a bridge between two incompatible interfaces by converting the interface of a class into another interface that a client expects.
+
+## Purpose
+* To `enable collaboration` between classes with incompatible interfaces.
+* To `reuse existing classes` without modifying their code.
+* To provide a `unified interface` for a set of interfaces in a subsystem.
+
+## Key Components
+* `Target`: The interface that the client expects or uses.
+* `Adaptee`: The existing class with an incompatible interface that needs to be adapted.
+* `Adapter`: A class that implements the Target interface and wraps the Adaptee, translating requests from the Target interface to the Adaptee's interface.
+* `Client`: The class that interacts with the Target interface.
+
+## How It Works
+* The `Client` interacts with the Target interface.
+* The `Adapter` implements the `Target` interface and contains a reference to the `Adaptee`.
+* The `Adapter` translates requests from the `Client` into a form that the `Adaptee` can understand.
+
+## Types of Adapters
+* `Class Adapter`: Uses multiple inheritance to adapt one interface to another. This is not possible in languages like Java that do not support multiple inheritance.
+* `Object Adapter`: Uses composition to wrap the Adaptee and implement the Target interface. This is the more common approach.
+
+## Advantages
+* `Reusability`: Allows existing classes to be reused without modification.
+* `Flexibility`: Enables collaboration between classes with incompatible interfaces.
+* `Single Responsibility Principle`: Separates the interface conversion logic from the primary business logic.
+* `Open/Closed Principle`: Introduces new adapters without changing existing code.
+
+## Disadvantages
+* `Complexity`: Introduces additional classes and can increase the complexity of the code.
+* `Overhead`: May introduce some overhead due to the additional layer of indirection.
+
+## When To Use
+* When you want to use an existing class, but its interface does not match the one you need.
+* When you want to create a reusable class that cooperates with classes that have incompatible interfaces.
+* When you need to integrate multiple third-party libraries with different interfaces.
+
+## Example Use Cases
+* Integrating legacy code with new systems.
+* Adapting third-party libraries to work with your application.
+* Providing a unified interface for a set of interfaces in a subsystem.
+
+## Comparision with Other Patterns
+* `Bridge`: Separates an object’s abstraction from its implementation, while Adapter makes unrelated classes work together.
+* `Decorato`r: Adds behavior to objects dynamically, while Adapter changes the interface of an existing object.
+* `Facade`: Provides a simplified interface to a complex subsystem, while Adapter makes one interface compatible with another.
+
+## Best Practices
+* Use the Adapter pattern when you need to integrate existing classes with incompatible interfaces.
+* Prefer composition over inheritance when implementing the Adapter pattern.
+* Ensure that the Adapter class adheres to the Single Responsibility Principle by separating the interface conversion logic from the primary business logic.
+
+## Common Pitfalls
+* `Overuse`: Overusing the Adapter pattern can lead to a proliferation of adapter classes, increasing complexity.
+* `Tight Coupling`: Failing to properly encapsulate the Adaptee can lead to tight coupling between the Adapter and the Adaptee.
