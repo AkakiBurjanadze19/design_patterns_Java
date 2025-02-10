@@ -262,7 +262,7 @@
 
 ## Comparision with Other Patterns
 * `Bridge`: Separates an object’s abstraction from its implementation, while Adapter makes unrelated classes work together.
-* `Decorato`r: Adds behavior to objects dynamically, while Adapter changes the interface of an existing object.
+* `Decorator`: Adds behavior to objects dynamically, while Adapter changes the interface of an existing object.
 * `Facade`: Provides a simplified interface to a complex subsystem, while Adapter makes one interface compatible with another.
 
 ## Best Practices
