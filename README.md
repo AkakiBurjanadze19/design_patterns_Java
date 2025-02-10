@@ -292,7 +292,7 @@
 
 ## How It Works
 * The `Abstraction` contains a reference to the `Implementor` and delegates the low-level work to it.
-* The `Refined Abstractio` extends the `Abstraction` to provide additional functionality.
+* The `Refined Abstraction` extends the `Abstraction` to provide additional functionality.
 * The `Concrete Implementor` implements the `Implementor` interface and provides the specific implementation details.
 * The `Client` interacts with the `Abstraction`, which in turn uses the `Implementor` to perform the low-level operations.
 
