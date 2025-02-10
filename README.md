@@ -1,3 +1,7 @@
+# Design Patterns
+## Description
+I created this repository to upload code snippets which i wrote while learning about some of the most popular design patterns. All examples are implemented in Java. Some of them are variations or they are directly from [Design Gurus](https://refactoring.guru/design-patterns/java). Besides that i added some important notes for each of the design patterns.
+
 # Design Pattern Notes
 
 # 1) Abstract Factory
