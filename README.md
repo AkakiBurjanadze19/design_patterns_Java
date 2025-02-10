@@ -444,3 +444,59 @@
 ## Common Pitfalls
 * `Overuse`: Overusing the Iterator pattern can lead to a proliferation of classes, increasing complexity.
 * `Tight Coupling`: Failing to properly encapsulate the iterator can lead to tight coupling between the collection and the traversal logic.
+
+# 9) Strategy
+## Definition
+* The `Strategy Design Pattern` is a `behavioral design pattern` that enables an algorithm's behavior to be selected at runtime.
+* It defines a family of algorithms, encapsulates each one, and makes them interchangeable, allowing the algorithm to vary independently from the clients that use it.
+
+## Purpose
+* To `encapsulate` different algorithms or behaviors and make them `interchangeable`.
+* To allow the `algorithm` to vary independently from the `client` that uses it.
+* To promote `flexibility` and `reusability` by separating the algorithm's implementation from the client code.
+
+## Key Components
+* `Strategy`: An interface or abstract class that defines the method(s) for the algorithm.
+* `Concrete Strategy`: Implements the Strategy interface and provides the actual implementation of the algorithm.
+* `Context`: Maintains a reference to a Strategy object and uses it to execute the algorithm. It may also provide an interface for clients to set or change the strategy.
+
+## How It Works
+* The `Context` class contains a reference to a Strategy object.
+* The `Context` delegates the execution of the algorithm to the `Strategy` object.
+* The `Client` can configure the `Context` with a specific `Concrete Strategy` at runtime.
+* The `Context` executes the algorithm using the configured `Strategy`.
+
+## Advantages
+* `Flexibility`: Allows algorithms to be selected and changed at runtime.
+* `Reusability`: Encapsulates algorithms, making them reusable across different contexts.
+* `Separation of Concerns`: Separates the algorithm's implementation from the client code.
+* `Open/Closed Principle`: New strategies can be introduced without modifying existing code.
+
+## Disadvantages
+* `Complexity`: Introduces additional classes and can increase the complexity of the code.
+* `Overhead`: May introduce some overhead due to the additional layer of indirection.
+
+## When To Use
+* When you need to `switch between different algorithms` or behaviors at runtime.
+* When you have multiple related classes that differ only in their behavior.
+* When you want to isolate the implementation details of an algorithm from the code that uses it.
+
+## Example Use Cases
+* `Sorting Algorithms`: Switching between different sorting algorithms (e.g., QuickSort, MergeSort) at runtime.
+* `Payment Methods`: Supporting multiple payment methods (e.g., Credit Card, PayPal, Bitcoin) in an e-commerce application.
+* `Compression Algorithms`: Choosing between different compression algorithms (e.g., ZIP, RAR) based on user preference.
+* `Navigation Systems`: Switching between different routing algorithms (e.g., shortest path, fastest route) in a GPS application.
+
+## Comparision with Other Patterns
+* `State`: Encapsulates state-specific behavior and allows an object to change its behavior when its state changes, while Strategy encapsulates algorithms and allows them to be selected at runtime.
+* `Template Method`: Defines the skeleton of an algorithm in a method, deferring some steps to subclasses, while Strategy encapsulates the entire algorithm.
+* `Command`: Encapsulates a request as an object, allowing parameterization of clients with different requests, while Strategy encapsulates an algorithm.
+
+## Best Practices
+* Use the Strategy pattern when you need to switch between different algorithms or behaviors at runtime.
+* Ensure that the strategies are properly encapsulated and adhere to the Single Responsibility Principle.
+* Prefer composition over inheritance when implementing the Strategy pattern.
+
+## Common Pitfalls
+* `Overuse`: Overusing the Strategy pattern can lead to a proliferation of classes, increasing complexity.
+* `Tight Coupling`: Failing to properly encapsulate the strategies can lead to tight coupling between the context and the strategies.
