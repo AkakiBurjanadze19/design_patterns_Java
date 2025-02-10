@@ -500,3 +500,70 @@
 ## Common Pitfalls
 * `Overuse`: Overusing the Strategy pattern can lead to a proliferation of classes, increasing complexity.
 * `Tight Coupling`: Failing to properly encapsulate the strategies can lead to tight coupling between the context and the strategies.
+
+# 10) Facade
+## Definition
+* The `Facade Design Pattern` is a `structural design pattern` that provides a `simplified` interface to a complex subsystem or set of interfaces.
+* It acts as a `higher-level interface` that makes the subsystem easier to use by hiding its complexities.
+
+## Purpose
+* To `simplify the interaction` with a complex system by providing a unified and easy-to-use interface.
+* To `decouple` the client code from the subsystem, making the system more modular and easier to maintain.
+* To `reduce dependencies` between the client and the subsystem, promoting loose coupling.
+
+## Key Components
+* `Facade`: A class that provides a simplified interface to a complex subsystem. It delegates client requests to appropriate objects within the subsystem.
+* `Subsystem Classes`: A set of classes that implement the functionality of the subsystem. These classes are not aware of the Facade and work independently.
+* `Client`: The class or code that interacts with the Facade to access the subsystem's functionality.
+
+## How It Works
+* The `Facade` class provides a `single entry point` to the subsystem, encapsulating its complexity.
+* The `Client` interacts with the `Facade` instead of directly interacting with the subsystem classes.
+* The `Facade` delegates the client's requests to the appropriate classes within the subsystem and coordinates their interactions.
+
+## Advantages
+* `Simplified Interface`: Provides a simple and easy-to-use interface to a complex system.
+* `Decoupling`: Reduces dependencies between the client and the subsystem, promoting loose coupling.
+* `Improved Readability`: Makes the client code more readable and maintainable by hiding the subsystem's complexity.
+* `Flexibility`: Allows the subsystem to evolve independently of the client code.
+
+## Disadvantages
+* `Limited Flexibility`: The Facade may not expose all the functionality of the subsystem, limiting flexibility for advanced users.
+* `Potential Bottleneck`: The Facade can become a bottleneck if it is overused or not properly designed.
+
+## When To Use
+* When you want to provide a `simple interface` to a complex subsystem.
+* When you need to `decouple` the client code from the subsystem, making the system more modular and easier to maintain.
+* When you want to `layer` a system, providing a clear entry point for each layer.
+
+## Example Use Cases
+* `Libraries and Frameworks`: Providing a simplified API for complex libraries or frameworks.
+* `Home Automation Systems`: Offering a unified interface to control various home devices (e.g., lights, thermostat, security system).
+* `E-commerce Platforms`: Simplifying the process of placing an order by handling inventory, payment, and shipping in the background.
+* `Operating Systems`: Providing a high-level interface for file system operations, hiding the complexities of low-level system calls.
+
+## Comparision with Other Patterns
+* `Adapter`: Converts one interface to another, while Facade provides a simplified interface to a complex subsystem.
+* `Proxy`: Controls access to an object, while Facade simplifies the interaction with a set of objects.
+* `Mediator`: Centralizes complex communication between objects, while Facade simplifies the interaction with a subsystem.
+
+## Best Practices
+* Use the Facade pattern when you want to provide a simple and unified interface to a complex subsystem.
+* Ensure that the Facade properly encapsulates the subsystem's complexity and provides a clear and easy-to-use interface.
+* Avoid overloading the Facade with too many responsibilities, as it can become a bottleneck.
+
+## Common Pitfalls
+* `Overuse`: Overusing the Facade pattern can lead to a monolithic interface that is difficult to maintain.
+* `Limited Flexibility`: The Facade may not expose all the functionality of the subsystem, limiting flexibility for advanced users.
+
+### Articles
+* [Abstract Factory](https://refactoring.guru/design-patterns/abstract-factory)
+* [Builder](https://refactoring.guru/design-patterns/builder)
+* [Prototype](https://refactoring.guru/design-patterns/prototype)
+* [Singleton](https://refactoring.guru/design-patterns/singleton)
+* [Adapter](https://refactoring.guru/design-patterns/adapter)
+* [Bridge](https://refactoring.guru/design-patterns/bridge)
+* [Observer](https://refactoring.guru/design-patterns/observer)
+* [Iterator](https://refactoring.guru/design-patterns/iterator)
+* [Strategy](https://refactoring.guru/design-patterns/strategy)
+* [Facade](https://refactoring.guru/design-patterns/facade)
