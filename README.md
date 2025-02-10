@@ -329,3 +329,62 @@
 ## Common Pitfalls
 * `Overuse`: Overusing the Bridge pattern can lead to a proliferation of classes, increasing complexity.
 * `Tight Coupling`: Failing to properly decouple the abstraction from the implementation can lead to tight coupling.
+
+# 7) Observer
+## Definition
+* The `Observer Design Pattern` is a behavioral design pattern that defines a `one-to-many dependency` between objects so that when one object (the `subject`) changes state, all its dependents (`observers`) are notified and updated automatically.
+* It is also known as the `Publish-Subscribe` pattern.
+
+## Purpose
+* To `decouple` the subject from its observers, allowing them to interact without being tightly coupled.
+* To provide a mechanism for `automatic notification` and `updating` of dependent objects when the state of the subject changes.
+* To support `broadcast communication` between objects.
+
+## Key Components
+* `Subject`: The object that maintains a list of observers and notifies them of state changes. It provides methods to attach, detach, and notify observers.
+* `Observer`: An interface or abstract class that defines the `update` method, which is called by the subject to notify the observer of a state change.
+* `Concrete Subject`: Implements the Subject interface and maintains the state. It sends notifications to observers when its state changes.
+* `Concrete Observer`: Implements the Observer interface and defines the specific actions to be taken when notified of a state change.
+
+## How It Works
+* The `Concrete Subject` maintains a list of `Observers` and provides methods to attach and detach observers.
+* When the state of the `Concrete Subject` changes, it calls the `notify` method to inform all registered observers.
+* Each `Concrete Observer` implements the `update` method, which is called by the `Concrete Subject` to notify the observer of the state change.
+* The `Concrete Observer` can then query the `Concrete Subject` for the updated state and perform any necessary actions.
+
+## Advantages
+* `Decoupling`: Separates the subject from its observers, reducing dependencies between them.
+* `Flexibility`: Allows dynamic addition and removal of observers at runtime.
+* `Broadcast Communication`: Supports one-to-many communication, making it easy to notify multiple observers of state changes.
+* `Reusability`: Observers can be reused across different subjects.
+
+## Disadvantages
+* `Performance Overhead`: Notifying a large number of observers can introduce performance overhead.
+* `Complexity`: Can introduce complexity, especially when dealing with multiple subjects and observers.
+* `Unexpected Updates`: Observers may receive updates they are not interested in, leading to unnecessary processing.
+
+## When To Use
+* When a change to one object requires changing other objects, and you don’t know how many objects need to be changed.
+* When an object should be able to notify other objects without making assumptions about who those objects are.
+* When you need to support broadcast communication between objects.
+
+## Example Use Cases
+* `Event Handling Systems`: Notifying multiple event handlers of an event.
+* `Model-View-Controller (MVC) Architecture`: Updating views when the model changes.
+* `Stock Market Applications`: Notifying investors of stock price changes.
+* `Weather Monitoring Systems`: Updating displays when weather data changes.
+
+## Comparision with Other Patterns
+* `Mediator`: Centralizes complex communication between objects, while Observer decentralizes communication by allowing objects to notify each other directly.
+* `Chain of Responsibility`: Passes a request along a chain of handlers, while Observer notifies multiple observers of a state change.
+* `Event Aggregator`: Collects events from multiple sources and distributes them to interested parties, while Observer directly notifies observers of state changes.
+
+## Best Practices
+* Use the Observer pattern when you need to decouple the subject from its observers and allow them to interact without being tightly coupled.
+* Ensure that the subject and observers are properly decoupled to avoid tight coupling.
+* Consider using an event bus or message queue for more complex scenarios involving multiple subjects and observers.
+
+## Common Pitfalls
+* `Memory Leaks`: Failing to detach observers can lead to memory leaks, especially in long-running applications.
+* `Performance Issues`: Notifying a large number of observers can introduce performance overhead.
+* `Unexpected Updates`: Observers may receive updates they are not interested in, leading to unnecessary processing.
